@@ -1,4 +1,5 @@
 
+//prompt 1. Object of store products and their prices
 const storeItems = {
     shampoo : 10,
     conditioner : 12,
@@ -11,10 +12,15 @@ const storeItems = {
     comb : 7,
 };
 
+//prompt 2. array of items in a shopping cart
 const shoppingCart = ['cleanser', 'moisurizer', 'hairbrush', 'scrub'];
 
-//function shoppingCartCost () {
-
-//};
-
-console.log(shoppingCart[0]);
+//prompt 3. a function that returns shopping cart total
+function findTotalOf (object){ 
+    let totalofProps = 0;
+    for (const props in object){
+        totalofProps += object[props];
+    };
+    return totalofProps;
+};
+console.log(findTotalOf(storeItems));
